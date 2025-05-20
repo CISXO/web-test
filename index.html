@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cisxo의 포트폴리오</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .navbar {
+      padding: 1rem 2rem;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #8e44ad;
+    }
+
+    .logo-text {
+      font-family: 'Courier New', Courier, monospace;
+      line-height: 1;
+    }
+
+    .logo-text span:first-child {
+      color: #7c3aed; /* Violet */
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .logo-text span:last-child {
+      color: #ec4899; /* Pink */
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #333 !important;
+    }
+
+    .nav-link:hover {
+      color: #6366f1 !important;
+    }
+
+    .social-icons a {
+      color: #333;
+      transition: color 0.2s;
+    }
+
+    .social-icons a:hover {
+      color: #6366f1;
+    }
+
+    .hero-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      margin: 20px;
+      border-radius: 12px;
+    }
+
+    .hero-section img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #a084f6;
+    }
+
+    .hero-text h1 {
+      font-size: 24px;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text span {
+      color: #a084f6;
+      font-weight: bold;
+    }
+
+    .tech-section, .project-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .tech-icons img {
+      height: 50px;
+      margin: 0.5rem;
+    }
+
+    .projects .card {
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* .footer {
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 30px 10px;
+      border-top: 1px solid #ddd;
+    } */
+
+    .intro-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      max-width: 800px; /* 필요에 따라 조절 */
+      margin: 0 auto;
+    }
+
+    .intro-text {
+      
+      margin-bottom: 20px;
+    }
+
+
+    .intro-text .highlight {
+      color: #a084f6;
+      font-weight: bold;
+    }
+
+    .intro-container img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #a084f6;
+    }
+
+    @media (max-width: 576px) {
+      .intro-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <style>
+.footer {
+  background-color: #ffffff; /* 푸터 배경 흰색 */
+  padding: 20px 40px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.footer-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: #6c5ce7;
+}
+
+.footer-right {
+  
+  display: flex;
+  align-items: center;
+  gap: 20px; /* 항목 간의 간격 */
+  flex-wrap: wrap; /* 너무 좁은 화면에서 줄바꿈 허용 */
+  justify-content: flex-end; /* 오른쪽 정렬 */
+}
+
+.footer-concat {
+  font-size: 14px;
+  color: #333;
+}
+
+.contact {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin-left: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  fill: currentColor;
+}
+
+.social-icons img:hover {
+  filter: none;
+}
+
+.footer hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+/* 기술 스택 아이콘 호버 효과 */
+.tech-icons img {
+  height: 50px;
+  margin: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.tech-icons img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* 프로젝트 카드 호버 효과 */
+.projects .card,
+.project-section .card {
+  transition: transform 0.3s ease;
+}
+.projects .card:hover,
+.project-section .card:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+
+}
+
+
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand logo-text" href="#">
+        <span>{007}</span><br />
+        <span>pavang</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-2"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#">Tech Stack</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#">Projects</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+        <div class="social-icons d-flex align-items-center">
+          <a href="https://github.com" class="mx-2" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+          <a href="https://twitter.com" class="mx-2" target="_blank" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="https://linkedin.com" class="mx-2" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="intro-container">
+    <div class="intro-text">
+      <h1>Hi 👋,</h1>
+      <h2><p>제 이름은 <span class="highlight">토리</span>예요!</p></h2>
+      <h2><p>저는 웹 개발을 잘 해요!</p></h2>
+    </div>
+    <div class="intro-img">
+      <img src="https://placedog.net/300/300" alt="토리">
+    </div>
+    
+  </div>
+
+  <section class="tech-section">
+    <h3>My Tech Stack</h3>
+    <p>제가 주로 사용하는 기술 스택들이에요</p>
+    <div class="tech-icons d-flex flex-wrap justify-content-center">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+    </div>
+  </section>
+
+  <section class="project-section container">
+    <h3>Projects</h3>
+    <p>제가 진행한 프로젝트들이에요</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- 반복 코드 부분-->
+
+      <!-- 반복 카드 요소는 필요 시 복사해서 추가 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm rounded-4">
+          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Project Title goes here</h5>
+            <p class="card-text text-muted small">
+              This is sample project description random things are here in description.<br>
+              This is sample project lorem ipsum generator for dummy content.
+            </p>
+            <p class="text-muted small mt-auto">
+              <strong>Tech stack :</strong>
+              <span class="text-primary">HTML</span>,
+              <span class="text-secondary">JavaScript</span>,
+              <span class="text-info">SASS</span>,
+              <span class="text-success">React</span>
+            </p>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fas fa-link me-1"></i> Live Preview
+              </a>
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fab fa-github me-1"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-sm rounded-4">
+          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Project Title goes here</h5>
+            <p class="card-text text-muted small">
+              This is sample project description random things are here in description.<br>
+              This is sample project lorem ipsum generator for dummy content.
+            </p>
+            <p class="text-muted small mt-auto">
+              <strong>Tech stack :</strong>
+              <span class="text-primary">HTML</span>,
+              <span class="text-secondary">JavaScript</span>,
+              <span class="text-info">SASS</span>,
+              <span class="text-success">React</span>
+            </p>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fas fa-link me-1"></i> Live Preview
+              </a>
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fab fa-github me-1"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm rounded-4">
+          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Project Title goes here</h5>
+            <p class="card-text text-muted small">
+              This is sample project description random things are here in description.<br>
+              This is sample project lorem ipsum generator for dummy content.
+            </p>
+            <p class="text-muted small mt-auto">
+              <strong>Tech stack :</strong>
+              <span class="text-primary">HTML</span>,
+              <span class="text-secondary">JavaScript</span>,
+              <span class="text-info">SASS</span>,
+              <span class="text-success">React</span>
+            </p>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fas fa-link me-1"></i> Live Preview
+              </a>
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fab fa-github me-1"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm rounded-4">
+          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Project Title goes here</h5>
+            <p class="card-text text-muted small">
+              This is sample project description random things are here in description.<br>
+              This is sample project lorem ipsum generator for dummy content.
+            </p>
+            <p class="text-muted small mt-auto">
+              <strong>Tech stack :</strong>
+              <span class="text-primary">HTML</span>,
+              <span class="text-secondary">JavaScript</span>,
+              <span class="text-info">SASS</span>,
+              <span class="text-success">React</span>
+            </p>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fas fa-link me-1"></i> Live Preview
+              </a>
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fab fa-github me-1"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm rounded-4">
+          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Project Title goes here</h5>
+            <p class="card-text text-muted small">
+              This is sample project description random things are here in description.<br>
+              This is sample project lorem ipsum generator for dummy content.
+            </p>
+            <p class="text-muted small mt-auto">
+              <strong>Tech stack :</strong>
+              <span class="text-primary">HTML</span>,
+              <span class="text-secondary">JavaScript</span>,
+              <span class="text-info">SASS</span>,
+              <span class="text-success">React</span>
+            </p>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fas fa-link me-1"></i> Live Preview
+              </a>
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fab fa-github me-1"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm rounded-4">
+          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Project Title goes here</h5>
+            <p class="card-text text-muted small">
+              This is sample project description random things are here in description.<br>
+              This is sample project lorem ipsum generator for dummy content.
+            </p>
+            <p class="text-muted small mt-auto">
+              <strong>Tech stack :</strong>
+              <span class="text-primary">HTML</span>,
+              <span class="text-secondary">JavaScript</span>,
+              <span class="text-info">SASS</span>,
+              <span class="text-success">React</span>
+            </p>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fas fa-link me-1"></i> Live Preview
+              </a>
+              <a href="#" class="btn btn-sm btn-outline-dark">
+                <i class="fab fa-github me-1"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        <span class="footer-name">{007}<br>pavang</span>
+      </div>
+      <div class="footer-right">
+        <div class="contact">+91 12345 04976</div> <br><br>
+        <div class= "contact">info@example.com</div>
+        <div class="social-icons">
+          <a href="https://github.com" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+          </a>
+          <a href="https://twitter.com" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
+          </a>
+          <a href="https://linkedin.com" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      Designed and built by Pavan M with 💖 & Coffee ☕
+    </div>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
