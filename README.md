@@ -1,5 +1,10 @@
 # web-test
 
+## main home 디자인 보고 따라 만들기
+
+<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/f0748415-02ac-4866-9dab-fe46ee3a8cd1" />
+ <img width="1440" alt="Image" src="https://github.com/user-attachments/assets/8deef4ea-1449-4529-835b-2e5ecc976520" />
+
 ## HTML 기본 템플릿 분석
 
 ```
