@@ -51,7 +51,7 @@
 
     .nav-link {
       font-weight: 500;
-      color: #333 !important;
+      color: gray !important;
     }
 
     .nav-link:hover {
@@ -97,10 +97,12 @@
     .tech-section, .project-section {
       text-align: center;
       padding: 40px 20px;
+      padding-top: 200px;
     }
 
     .tech-icons img {
-      height: 50px;
+      height: 100px;
+    
       margin: 0.5rem;
     }
 
@@ -119,13 +121,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 40px;
+      padding-top: 200px;
       max-width: 800px; /* 필요에 따라 조절 */
       margin: 0 auto;
+
     }
 
     .intro-text {
-      
+      font-size: 2em;
       margin-bottom: 20px;
     }
 
@@ -136,17 +139,27 @@
     }
 
     .intro-container img {
-      width: 150px;
-      height: 150px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #a084f6;
+      border: 7px solid #a084f6;
     }
 
     @media (max-width: 576px) {
       .intro-container {
         flex-direction: column;
       }
+    }
+
+    .grid-tech-section {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 48px;
+
+      margin-left: 200px;
+      margin-right: 200px;
+      padding-top: 138px;
     }
   </style>
   <style>
@@ -179,7 +192,7 @@
 .footer-name {
   font-weight: bold;
   font-size: 18px;
-  color: #6c5ce7;
+  color: gray;
 }
 
 .footer-right {
@@ -197,6 +210,7 @@
 }
 
 .contact {
+  color: gray;
   margin-bottom: 10px;
 }
 
@@ -231,8 +245,7 @@
 
 /* 기술 스택 아이콘 호버 효과 */
 .tech-icons img {
-  height: 50px;
-  margin: 0.5rem;
+
   transition: transform 0.3s ease;
 }
 .tech-icons img:hover {
@@ -252,27 +265,41 @@
 
 }
 
+.nav-var-li-tetter
+{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.big-container {
+  padding-left: 200px;
+  padding-right: 200px;
+}
 
-
+.card-section-prr {
+  padding-top:80px;
+}
   </style>
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand logo-text" href="#">
         <span>{007}</span><br />
-        <span>pavang</span>
+        <span style="
+        padding-left: 4px;
+    ">pavang</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-between" id="navMenu">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item mx-2"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item mx-2"><a class="nav-link" href="#">About</a></li>
-          <li class="nav-item mx-2"><a class="nav-link" href="#">Tech Stack</a></li>
-          <li class="nav-item mx-2"><a class="nav-link" href="#">Projects</a></li>
-          <li class="nav-item mx-2"><a class="nav-link" href="#">Contact</a></li>
+        <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left: auto !important;">
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#">Tech Stack</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#">Projects</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#">Contact</a></li>
         </ul>
         <div class="social-icons d-flex align-items-center">
           <a href="https://github.com" class="mx-2" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
@@ -282,239 +309,247 @@
       </div>
     </div>
   </nav>
-  <div class="intro-container">
-    <div class="intro-text">
-      <h1>Hi 👋,</h1>
-      <h2><p>제 이름은 <span class="highlight">토리</span>예요!</p></h2>
-      <h2><p>저는 웹 개발을 잘 해요!</p></h2>
+  <div class = "big-container">
+    <div class="intro-container">
+      <div class="intro-text">
+        <h1>Hi 👋,</h1>
+        <h1><p>제 이름은 <span class="highlight">토리</span>예요!</p></h1>
+        <h1><p>저는 웹 개발을 잘 해요!</p></h1>
+      </div>
+      <div class="intro-img">
+        <img src="https://placedog.net/300/300" alt="토리">
+      </div>
+      
     </div>
-    <div class="intro-img">
-      <img src="https://placedog.net/300/300" alt="토리">
-    </div>
+
+    <section class="tech-section">
+      <h1>My Tech Stack</h1>
+      <h3 style="
+    color: gray;
+"> Technologies I’ve been working with recently</h3>
+      <div class="tech-icons flex-wrap justify-content-center grid-tech-section">
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS"></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux"></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap"></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass"></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux"></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode"></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></div>
+      </div>
+    </section>
+
+    <section class="project-section container">
+      <h1>Projects</h1>
+      <h3 style="
+      color: gray;
+  ">Things I’ve built so far</h3>
+      <div class="row row-cols-1 row-cols-md-3 g-4 card-section-prr">
+        <!-- 반복 코드 부분-->
+
+        <!-- 반복 카드 요소는 필요 시 복사해서 추가 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm rounded-4">
+            <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Project Title goes here</h5>
+              <p class="card-text text-muted small">
+                This is sample project description random things are here in description.<br>
+                This is sample project lorem ipsum generator for dummy content.
+              </p>
+              <p class="text-muted small mt-auto">
+                <strong>Tech stack :</strong>
+                <span class="text-primary">HTML</span>,
+                <span class="text-secondary">JavaScript</span>,
+                <span class="text-info">SASS</span>,
+                <span class="text-success">React</span>
+              </p>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fas fa-link me-1"></i> Live Preview
+                </a>
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fab fa-github me-1"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm rounded-4">
+            <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Project Title goes here</h5>
+              <p class="card-text text-muted small">
+                This is sample project description random things are here in description.<br>
+                This is sample project lorem ipsum generator for dummy content.
+              </p>
+              <p class="text-muted small mt-auto">
+                <strong>Tech stack :</strong>
+                <span class="text-primary">HTML</span>,
+                <span class="text-secondary">JavaScript</span>,
+                <span class="text-info">SASS</span>,
+                <span class="text-success">React</span>
+              </p>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fas fa-link me-1"></i> Live Preview
+                </a>
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fab fa-github me-1"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm rounded-4">
+            <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Project Title goes here</h5>
+              <p class="card-text text-muted small">
+                This is sample project description random things are here in description.<br>
+                This is sample project lorem ipsum generator for dummy content.
+              </p>
+              <p class="text-muted small mt-auto">
+                <strong>Tech stack :</strong>
+                <span class="text-primary">HTML</span>,
+                <span class="text-secondary">JavaScript</span>,
+                <span class="text-info">SASS</span>,
+                <span class="text-success">React</span>
+              </p>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fas fa-link me-1"></i> Live Preview
+                </a>
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fab fa-github me-1"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm rounded-4">
+            <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Project Title goes here</h5>
+              <p class="card-text text-muted small">
+                This is sample project description random things are here in description.<br>
+                This is sample project lorem ipsum generator for dummy content.
+              </p>
+              <p class="text-muted small mt-auto">
+                <strong>Tech stack :</strong>
+                <span class="text-primary">HTML</span>,
+                <span class="text-secondary">JavaScript</span>,
+                <span class="text-info">SASS</span>,
+                <span class="text-success">React</span>
+              </p>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fas fa-link me-1"></i> Live Preview
+                </a>
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fab fa-github me-1"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm rounded-4">
+            <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Project Title goes here</h5>
+              <p class="card-text text-muted small">
+                This is sample project description random things are here in description.<br>
+                This is sample project lorem ipsum generator for dummy content.
+              </p>
+              <p class="text-muted small mt-auto">
+                <strong>Tech stack :</strong>
+                <span class="text-primary">HTML</span>,
+                <span class="text-secondary">JavaScript</span>,
+                <span class="text-info">SASS</span>,
+                <span class="text-success">React</span>
+              </p>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fas fa-link me-1"></i> Live Preview
+                </a>
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fab fa-github me-1"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm rounded-4">
+            <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Project Title goes here</h5>
+              <p class="card-text text-muted small">
+                This is sample project description random things are here in description.<br>
+                This is sample project lorem ipsum generator for dummy content.
+              </p>
+              <p class="text-muted small mt-auto">
+                <strong>Tech stack :</strong>
+                <span class="text-primary">HTML</span>,
+                <span class="text-secondary">JavaScript</span>,
+                <span class="text-info">SASS</span>,
+                <span class="text-success">React</span>
+              </p>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fas fa-link me-1"></i> Live Preview
+                </a>
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fab fa-github me-1"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
     
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-left">
+          <span class="footer-name">{007}<br>pavang</span>
+        </div>
+        <div class="footer-right">
+          <div class="contact">+91 12345 04976</div> <br><br>
+          <div class= "contact">info@example.com</div>
+          <div class="social-icons">
+            <a href="https://github.com" target="_blank">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-bottom">
+        Designed and built by Pavan M with 💖 & Coffee ☕
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </div>
-
-  <section class="tech-section">
-    <h3>My Tech Stack</h3>
-    <p>제가 주로 사용하는 기술 스택들이에요</p>
-    <div class="tech-icons d-flex flex-wrap justify-content-center">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-    </div>
-  </section>
-
-  <section class="project-section container">
-    <h3>Projects</h3>
-    <p>제가 진행한 프로젝트들이에요</p>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <!-- 반복 코드 부분-->
-
-      <!-- 반복 카드 요소는 필요 시 복사해서 추가 -->
-      <div class="col">
-        <div class="card h-100 shadow-sm rounded-4">
-          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Project Title goes here</h5>
-            <p class="card-text text-muted small">
-              This is sample project description random things are here in description.<br>
-              This is sample project lorem ipsum generator for dummy content.
-            </p>
-            <p class="text-muted small mt-auto">
-              <strong>Tech stack :</strong>
-              <span class="text-primary">HTML</span>,
-              <span class="text-secondary">JavaScript</span>,
-              <span class="text-info">SASS</span>,
-              <span class="text-success">React</span>
-            </p>
-            <div class="d-flex justify-content-between mt-3">
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fas fa-link me-1"></i> Live Preview
-              </a>
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fab fa-github me-1"></i> View Code
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 shadow-sm rounded-4">
-          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Project Title goes here</h5>
-            <p class="card-text text-muted small">
-              This is sample project description random things are here in description.<br>
-              This is sample project lorem ipsum generator for dummy content.
-            </p>
-            <p class="text-muted small mt-auto">
-              <strong>Tech stack :</strong>
-              <span class="text-primary">HTML</span>,
-              <span class="text-secondary">JavaScript</span>,
-              <span class="text-info">SASS</span>,
-              <span class="text-success">React</span>
-            </p>
-            <div class="d-flex justify-content-between mt-3">
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fas fa-link me-1"></i> Live Preview
-              </a>
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fab fa-github me-1"></i> View Code
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100 shadow-sm rounded-4">
-          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Project Title goes here</h5>
-            <p class="card-text text-muted small">
-              This is sample project description random things are here in description.<br>
-              This is sample project lorem ipsum generator for dummy content.
-            </p>
-            <p class="text-muted small mt-auto">
-              <strong>Tech stack :</strong>
-              <span class="text-primary">HTML</span>,
-              <span class="text-secondary">JavaScript</span>,
-              <span class="text-info">SASS</span>,
-              <span class="text-success">React</span>
-            </p>
-            <div class="d-flex justify-content-between mt-3">
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fas fa-link me-1"></i> Live Preview
-              </a>
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fab fa-github me-1"></i> View Code
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100 shadow-sm rounded-4">
-          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Project Title goes here</h5>
-            <p class="card-text text-muted small">
-              This is sample project description random things are here in description.<br>
-              This is sample project lorem ipsum generator for dummy content.
-            </p>
-            <p class="text-muted small mt-auto">
-              <strong>Tech stack :</strong>
-              <span class="text-primary">HTML</span>,
-              <span class="text-secondary">JavaScript</span>,
-              <span class="text-info">SASS</span>,
-              <span class="text-success">React</span>
-            </p>
-            <div class="d-flex justify-content-between mt-3">
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fas fa-link me-1"></i> Live Preview
-              </a>
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fab fa-github me-1"></i> View Code
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100 shadow-sm rounded-4">
-          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Project Title goes here</h5>
-            <p class="card-text text-muted small">
-              This is sample project description random things are here in description.<br>
-              This is sample project lorem ipsum generator for dummy content.
-            </p>
-            <p class="text-muted small mt-auto">
-              <strong>Tech stack :</strong>
-              <span class="text-primary">HTML</span>,
-              <span class="text-secondary">JavaScript</span>,
-              <span class="text-info">SASS</span>,
-              <span class="text-success">React</span>
-            </p>
-            <div class="d-flex justify-content-between mt-3">
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fas fa-link me-1"></i> Live Preview
-              </a>
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fab fa-github me-1"></i> View Code
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100 shadow-sm rounded-4">
-          <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Project Title goes here</h5>
-            <p class="card-text text-muted small">
-              This is sample project description random things are here in description.<br>
-              This is sample project lorem ipsum generator for dummy content.
-            </p>
-            <p class="text-muted small mt-auto">
-              <strong>Tech stack :</strong>
-              <span class="text-primary">HTML</span>,
-              <span class="text-secondary">JavaScript</span>,
-              <span class="text-info">SASS</span>,
-              <span class="text-success">React</span>
-            </p>
-            <div class="d-flex justify-content-between mt-3">
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fas fa-link me-1"></i> Live Preview
-              </a>
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fab fa-github me-1"></i> View Code
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-left">
-        <span class="footer-name">{007}<br>pavang</span>
-      </div>
-      <div class="footer-right">
-        <div class="contact">+91 12345 04976</div> <br><br>
-        <div class= "contact">info@example.com</div>
-        <div class="social-icons">
-          <a href="https://github.com" target="_blank">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
-          </a>
-          <a href="https://twitter.com" target="_blank">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
-          </a>
-          <a href="https://linkedin.com" target="_blank">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn">
-          </a>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class="footer-bottom">
-      Designed and built by Pavan M with 💖 & Coffee ☕
-    </div>
-  </footer>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
