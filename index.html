@@ -9,9 +9,12 @@
   
 
 
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
   
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       padding: 0;
@@ -23,8 +26,12 @@
     .navbar {
       padding: 1rem 2rem;
       background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      border-bottom: 1px solid #e5e5e5;
+      position: fixed;
+      width: 100%;
+      padding-left: 127px;
+      padding-right: 127px;
+      /* box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #e5e5e5; */
     }
 
     .navbar-brand {
@@ -121,7 +128,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 200px;
+      padding-top: 300px;
       max-width: 800px; /* 필요에 따라 조절 */
       margin: 0 auto;
 
@@ -196,7 +203,6 @@
 }
 
 .footer-right {
-  
   display: flex;
   align-items: center;
   gap: 20px; /* 항목 간의 간격 */
@@ -295,11 +301,17 @@
       </button>
       <div class="collapse navbar-collapse justify-content-between" id="navMenu">
         <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left: auto !important;">
-          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#">Tech Stack</a></li>
-          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#">Projects</a></li>
-          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#">Contact</a></li>
+          <!-- <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="/web_test/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="/web_test/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="/web_test/tech.html">Tech Stack</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="/web_test/project.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="/web_test/contact.html">Contact</a></li> -->
+
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#Home">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#About">About</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#Tech">Tech Stack</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#Projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link nav-var-li-tetter" href="#Contact">Contact</a></li>
         </ul>
         <div class="social-icons d-flex align-items-center">
           <a href="https://github.com" class="mx-2" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
@@ -309,9 +321,10 @@
       </div>
     </div>
   </nav>
+
   <div class = "big-container">
-    <div class="intro-container">
-      <div class="intro-text">
+    <div class="intro-container" id="Home">
+      <div class="intro-text" id="About">
         <h1>Hi 👋,</h1>
         <h1><p>제 이름은 <span class="highlight">토리</span>예요!</p></h1>
         <h1><p>저는 웹 개발을 잘 해요!</p></h1>
@@ -322,7 +335,7 @@
       
     </div>
 
-    <section class="tech-section">
+    <section class="tech-section" id="Tech">
       <h1>My Tech Stack</h1>
       <h3 style="
     color: gray;
@@ -343,7 +356,7 @@
       </div>
     </section>
 
-    <section class="project-section container">
+    <section class="project-section container" id="Projects">
       <h1>Projects</h1>
       <h3 style="
       color: gray;
