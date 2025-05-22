@@ -30,6 +30,8 @@
       width: 100%;
       padding-left: 127px;
       padding-right: 127px;
+
+      z-index: 1000;
       /* box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       border-bottom: 1px solid #e5e5e5; */
     }
@@ -131,8 +133,15 @@
       padding-top: 300px;
       max-width: 800px; /* 필요에 따라 조절 */
       margin: 0 auto;
-
     }
+
+    @media (max-width: 768px) {
+      #Home {
+        padding-top: 100px;
+        display: inline-block;
+      }
+    }
+
 
     .intro-text {
       font-size: 2em;
@@ -168,6 +177,16 @@
       margin-right: 200px;
       padding-top: 138px;
     }
+    @media (max-width: 768px) {
+      .grid-tech-section {
+        grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+
+      margin-left: 0px;
+      margin-right: 0px;
+      }
+    }
+
   </style>
   <style>
 .footer {
@@ -181,7 +200,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+
 }
 
 .footer-left {
@@ -198,8 +217,15 @@
 
 .footer-name {
   font-weight: bold;
-  font-size: 18px;
   color: gray;
+}
+.footer-name-code {
+  font-size: 24px;
+  font-weight: bold; /* 선택 사항 */
+}
+
+.footer-name-name {
+  font-size: 14px;
 }
 
 .footer-right {
@@ -280,20 +306,85 @@
   padding-left: 200px;
   padding-right: 200px;
 }
-
-.card-section-prr {
-  padding-top:80px;
-}
   </style>
+<style>
+  @media (max-width: 560px) {
+    .navbar {
+      padding-left: 20px;
+      padding-top: 30px;
+      padding-right: 20px;
+    }
+    .big-container {
+      padding-top: 50px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    #Home {
+      display: flex;
+    }
 
+    .grid-tech-section {
+
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      row-gap: 24px;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding-top: 48px;
+      }
+
+    .tech-icons img {
+      height: 80px;
+      margin: 0rem;
+    }
+    .intro-text {
+      order: 1;
+      padding-top: 30px;
+    }
+    .introduce-hi {
+      text-align: center;
+    }
+    .text-section {
+      padding-top: 140px;
+    }
+    .card-section-prr {
+      padding-top: 24px;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between; /* 양쪽 정렬 */
+      align-items: flex-start;        /* 상단 정렬 */
+      row-gap: 70px;                      /* 요소 간 간격 */
+      
+    }
+    .contact-phone {
+      display: none;
+    }
+    .social-icons {
+      padding-right: 24px;;
+    }
+    .footer-right {
+      gap: 0px;;
+    }
+    .footer {
+      padding-top: 150px;
+    }
+    .my-card {
+      box-shadow: 0 4px 8px rgba(128, 128, 128, 0.2);
+       border-radius: 8px;
+    }
+  }
+</style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand logo-text" href="#">
-        <span>{007}</span><br />
+      <a class="navbar-brand logo-text mediaquery-nav-tile" href="#">
         <span style="
-        padding-left: 4px;
+    font-size: 1.8rem;">{007}</span><br />
+        <span style="
+        padding-left: 9px; 
+    font-size: 1.2rem;
     ">pavang</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -325,7 +416,7 @@
   <div class = "big-container">
     <div class="intro-container" id="Home">
       <div class="intro-text" id="About">
-        <h1>Hi 👋,</h1>
+        <h1 class="introduce-hi">Hi 👋,</h1>
         <h1><p>제 이름은 <span class="highlight">토리</span>예요!</p></h1>
         <h1><p>저는 웹 개발을 잘 해요!</p></h1>
       </div>
@@ -365,34 +456,7 @@
         <!-- 반복 코드 부분-->
 
         <!-- 반복 카드 요소는 필요 시 복사해서 추가 -->
-        <div class="col">
-          <div class="card h-100 shadow-sm rounded-4">
-            <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Project Title goes here</h5>
-              <p class="card-text text-muted small">
-                This is sample project description random things are here in description.<br>
-                This is sample project lorem ipsum generator for dummy content.
-              </p>
-              <p class="text-muted small mt-auto">
-                <strong>Tech stack :</strong>
-                <span class="text-primary">HTML</span>,
-                <span class="text-secondary">JavaScript</span>,
-                <span class="text-info">SASS</span>,
-                <span class="text-success">React</span>
-              </p>
-              <div class="d-flex justify-content-between mt-3">
-                <a href="#" class="btn btn-sm btn-outline-dark">
-                  <i class="fas fa-link me-1"></i> Live Preview
-                </a>
-                <a href="#" class="btn btn-sm btn-outline-dark">
-                  <i class="fab fa-github me-1"></i> View Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
+        <div class="col my-card">
           <div class="card h-100 shadow-sm rounded-4">
             <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
             <div class="card-body d-flex flex-column">
@@ -420,7 +484,7 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col my-card">
           <div class="card h-100 shadow-sm rounded-4">
             <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
             <div class="card-body d-flex flex-column">
@@ -448,7 +512,7 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col my-card">
           <div class="card h-100 shadow-sm rounded-4">
             <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
             <div class="card-body d-flex flex-column">
@@ -476,7 +540,7 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col my-card">
           <div class="card h-100 shadow-sm rounded-4">
             <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
             <div class="card-body d-flex flex-column">
@@ -504,7 +568,35 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col my-card">
+          <div class="card h-100 shadow-sm rounded-4">
+            <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Project Title goes here</h5>
+              <p class="card-text text-muted small">
+                This is sample project description random things are here in description.<br>
+                This is sample project lorem ipsum generator for dummy content.
+              </p>
+              <p class="text-muted small mt-auto">
+                <strong>Tech stack :</strong>
+                <span class="text-primary">HTML</span>,
+                <span class="text-secondary">JavaScript</span>,
+                <span class="text-info">SASS</span>,
+                <span class="text-success">React</span>
+              </p>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fas fa-link me-1"></i> Live Preview
+                </a>
+                <a href="#" class="btn btn-sm btn-outline-dark">
+                  <i class="fab fa-github me-1"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col my-card">
           <div class="card h-100 shadow-sm rounded-4">
             <img src="https://github.com/user-attachments/assets/1ec70e29-078f-4e87-b3d6-f1431cf3af88" class="card-img-top rounded-top-4" alt="Project Image">
             <div class="card-body d-flex flex-column">
@@ -538,10 +630,15 @@
     <footer class="footer">
       <div class="footer-top">
         <div class="footer-left">
-          <span class="footer-name">{007}<br>pavang</span>
+
+          <span class="footer-name">
+            <span class="footer-name-code">{007}</span><br>
+            <span class="footer-name-name">pavanmg</span>
+          </span>
+
         </div>
         <div class="footer-right">
-          <div class="contact">+91 12345 04976</div> <br><br>
+          <div class="contact contact-phone">+91 12345 04976</div> <br><br>
           <div class= "contact">info@example.com</div>
           <div class="social-icons">
             <a href="https://github.com" target="_blank">
@@ -558,7 +655,9 @@
       </div>
       <hr>
       <div class="footer-bottom">
-        Designed and built by Pavan M with 💖 & Coffee ☕
+        Designed and built 
+        <br>
+        by Pavan MG with Love & Coffee
       </div>
     </footer>
     
