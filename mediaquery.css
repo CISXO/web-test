@@ -1,0 +1,67 @@
+
+@media (max-width: 560px) {
+  .navbar {
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-right: 20px;
+  }
+  .big-container {
+    padding-top: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #Home {
+    display: flex;
+  }
+
+  .grid-tech-section {
+
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    row-gap: 24px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 48px;
+    }
+
+  .tech-icons img {
+    height: 80px;
+    margin: 0rem;
+  }
+  .intro-text {
+    order: 1;
+    padding-top: 30px;
+  }
+  .introduce-hi {
+    text-align: center;
+  }
+  .text-section {
+    padding-top: 140px;
+  }
+  .card-section-prr {
+    padding-top: 24px;
+  }
+  .footer-top {
+    display: flex;
+    justify-content: space-between; /* 양쪽 정렬 */
+    align-items: flex-start;        /* 상단 정렬 */
+    row-gap: 70px;                      /* 요소 간 간격 */
+    
+  }
+  .contact-phone {
+    display: none;
+  }
+  .social-icons {
+    padding-right: 24px;;
+  }
+  .footer-right {
+    gap: 0px;;
+  }
+  .footer {
+    padding-top: 150px;
+  }
+  .my-card {
+    box-shadow: 0 4px 8px rgba(128, 128, 128, 0.2);
+      border-radius: 8px;
+  }
+}
